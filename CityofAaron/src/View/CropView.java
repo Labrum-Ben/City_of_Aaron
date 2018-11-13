@@ -3,12 +3,12 @@
 // Author: Ben Labrum, Adrienne Groll, Gavin Siegel team
 // Date last modified: 11/7/2018
 //-------------------------------------------------------------
-package view;
+package View;
 
-import model.*;
-import control.*;
+import Model.*;
+import Control.*;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import cityofaaron.CityofAaron;
 
 /**
  *
@@ -20,7 +20,7 @@ public class CropView {
  private static Scanner keyboard = new Scanner(System.in);   
      
  // Get references to the Game object and the CropData object
- static private Game game = CityOfAaron.getGame();
+ static private Game game = CityofAaron.getGame();
  static private CropData cropData = game.getCropData();
 
  // The runCropView method()
@@ -48,13 +48,12 @@ public static void runCropView()
     public static void setOfferingView() 
     {
 
-    int offering = CropControl.setOffering();
     
-    system.out.println("\nWhat percentage of the harvest do you want to pay as an offering?");
-            
+        System.out.println("\nWhat percentage of the harvest do you want to pay as an offering?");
+   
         //  Get the user’s input and save it.
+        int offering = keyboard.nextInt(); 
 
-        offering = keyboard.nextInt();
         
         CropControl.setOffering(offering, cropData);
             } 

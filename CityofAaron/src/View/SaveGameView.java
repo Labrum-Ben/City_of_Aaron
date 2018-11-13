@@ -3,11 +3,11 @@
 // Author: Labrum Ben, Brown team
 // Date last modified: November 2018
 //-------------------------------------------------------------
-package view;
+package View;
 
-import view.MainMenuView;
+import View.MainMenuView;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import cityofaaron.CityofAaron;
 
 
 public class SaveGameView

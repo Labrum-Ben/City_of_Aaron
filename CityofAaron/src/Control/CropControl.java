@@ -8,7 +8,7 @@ package Control;
  */
 
 
-import model.CropData;
+import Model.CropData;
 import java.util.Random;
 
         

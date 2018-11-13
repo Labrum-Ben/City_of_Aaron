@@ -4,7 +4,7 @@
  * Fall 2018
  *  Team members: Ben Labrum, Adrienne Groll
  */
-package model;
+package Model;
 
 /**
  *

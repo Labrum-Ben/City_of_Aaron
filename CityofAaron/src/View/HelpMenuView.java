@@ -3,12 +3,12 @@
 // Author: ADRIENNE GROLL
 // Date last modified: 11/7/2018
 //-------------------------------------------------------------
-package view;
+package View;
 
 
 import Control.GameControl;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import cityofaaron.CityofAaron;
 /**
  *
  * @author theag - ADRIENNE GROLL
@@ -92,17 +92,17 @@ public int getMenuOption()
     {
         switch(option)
         {
-            case 1: // view goals
-                viewGoals();
+            case 1: // View goals
+                ViewGoals();
                 break;
-            case 2: // view map help
-                viewMapHelp();
+            case 2: // View map help
+                ViewMapHelp();
                 break;
-            case 3: // view move help
-                viewMoveHelp();
+            case 3: // View move help
+                ViewMoveHelp();
                 break;
-            case 4: // view list help
-                viewListHelp();
+            case 4: // View list help
+                ViewListHelp();
                 break;
             case 5:
                 System.out.println("Thanks for playing ... goodbye.");
@@ -111,22 +111,22 @@ public int getMenuOption()
     }
 
 
- public void viewGoals()
+ public void ViewGoals()
  {
      System.out.println("\nView goals option selected.");
  }
  
- public void viewMapHelp()
+ public void ViewMapHelp()
  {
      System.out.println("\nView map help option selected.");
  }
  
- public void viewMoveHelp ()
+ public void ViewMoveHelp ()
  {
      System.out.println("\nView move help option selected.");
  }
  
- public void viewListHelp ()
+ public void ViewListHelp ()
  {
      System.out.println("\nView list help option selected.");
  }

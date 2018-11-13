@@ -5,7 +5,7 @@
  *  Team members: Ben Labrum, Adrienne Groll
  */
 
-package model;
+package Model;
 
 import java.io.Serializable;
 

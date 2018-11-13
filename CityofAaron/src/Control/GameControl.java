@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package Control;
-import model.*;
-import cityofaaron.CityOfAaron;
+import Model.*;
+import cityofaaron.CityofAaron;
 
 /**
  *
@@ -41,7 +41,7 @@ public class GameControl {
         game.setCropData(cropData); 
         
         // when all is done, save a reference to the Game object
-        CityOfAaron.setGame(game);
+        CityofAaron.setGame(game);
 
    
   }        

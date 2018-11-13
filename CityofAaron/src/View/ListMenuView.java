@@ -1,13 +1,13 @@
-package view;
+package View;
 
 /* ListMenuView class
  * Object: Manage the list menu
  * @author Gavin Siegel
  * Date last modified:  11/7/2018
  */
-import view.MainMenuView;
+import View.MainMenuView;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import cityofaaron.CityofAaron;
 
 
 public class ListMenuView{

@@ -7,9 +7,10 @@
 
 package cityofaaron;
 import java.util.Random;
-import model.*;
-import view.*;
- public class CityOfAaron {
+import Model.*;
+import View.*;
+import model.Game;
+public class CityofAaron {
      
     
     private static Game theGame = null;
@@ -29,11 +30,4 @@ import view.*;
         theGame = game;
      }
 }
-
-  
-
-
-
-  
-
 

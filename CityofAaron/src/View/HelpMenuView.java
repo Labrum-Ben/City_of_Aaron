@@ -8,7 +8,7 @@ package View;
 
 import Control.GameControl;
 import java.util.Scanner;
-import cityofaaron.CityofAaron;
+import cityofaaron.CityOfAaron;
 /**
  *
  * @author theag - ADRIENNE GROLL

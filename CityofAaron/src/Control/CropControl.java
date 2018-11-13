@@ -1,7 +1,7 @@
 package Control;
 
 /*
- * The CityofAaron file for the cityOfAaron project
+ * The CityofAaron file for the cityofAaron project
  * CIT-260
  * Fall 2018
  *  Team members: Ben Labrum, Adrienne Groll

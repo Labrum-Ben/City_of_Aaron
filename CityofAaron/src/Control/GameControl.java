@@ -5,7 +5,7 @@
  */
 package Control;
 import Model.*;
-import cityofaaron.CityofAaron;
+import cityofaaron.CityOfAaron;
 
 /**
  *
@@ -41,7 +41,7 @@ public class GameControl {
         game.setCropData(cropData); 
         
         // when all is done, save a reference to the Game object
-        CityofAaron.setGame(game);
+        CityOfAaron.setGame(game);
 
    
   }        

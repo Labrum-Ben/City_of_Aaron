@@ -9,7 +9,7 @@ package cityofaaron;
 import java.util.Random;
 import Model.*;
 import View.*;
-import model.Game;
+import Model.Game;
 public class CityofAaron {
      
     

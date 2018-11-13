@@ -26,8 +26,13 @@ public class CityofAaron {
         mmv.displayMenuView();       
          
     }
-     public static void setGame(Game game) {
+    public static void setGame(Game game) {
         theGame = game;
      }
+     
+    public static Game getGame( ) {
+    return theGame;
+    }
+    
 }
 

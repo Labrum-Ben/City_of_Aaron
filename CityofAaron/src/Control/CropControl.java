@@ -18,8 +18,17 @@ import java.util.Random;
  */
 public class CropControl
 {
- private static Random random = new Random();
+    
+private static final int LAND_BASE = 17;
+private static final int LAND_RANGE = 10;
 
+private static Random random = new Random();
+ 
+
+ public static int calcLandCost( ) {
+ int landPrice = random.NextInt(LAND_RANGE) + LAND_BASE;
+ return landPrice;
+}
 
 /**
 * The buyLand method

@@ -53,7 +53,7 @@ public static void runCropView()
     system.out.println("\nWhat percentage of the harvest do you want to pay as an offering?");
             
         //  Get the user’s input and save it.
-        int offering;
+
         offering = keyboard.nextInt();
         
         CropControl.setOffering(offering, cropData);

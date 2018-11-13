@@ -24,6 +24,12 @@ public class MainMenuView
     private String theMenu;
     private int max;
   
+    public void displayHelpMenuView()
+{
+     // I added this code so it would display the help menu
+    HelpMenuView hmv = new HelpMenuView();
+    hmv.displayHelpMenuView();
+}
 public void displayMenuView()
 {
     int menuOption;
@@ -145,10 +151,7 @@ public void startSavedGame()
     System.out.println("\nStart saved game option selected.");
 }
  
-public void displayHelpMenuView()
-{
-    System.out.println("\nDisplay help game option selected.");
-}
+
   
 public void displaySaveGameView()
 {

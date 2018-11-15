@@ -7,7 +7,7 @@ package View;
  */
 import View.MainMenuView;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import CityofAaron.CityofAaron;
 
 
 public class ListMenuView{

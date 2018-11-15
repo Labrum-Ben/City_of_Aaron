@@ -8,7 +8,7 @@ package View;
 import Model.*;
 import Control.*;
 import java.util.Scanner;
-import cityofaaron.CityOfAaron;
+import CityofAaron.CityofAaron;
 
 /**
  *
@@ -20,7 +20,7 @@ public class CropView {
  private static Scanner keyboard = new Scanner(System.in);   
      
  // Get references to the Game object and the CropData object
- static private Game game = CityOfAaron.getGame();
+ static private Game game = CityofAaron.getGame();
  static private CropData cropData = game.getCropData();
 
  // The runCropView method()

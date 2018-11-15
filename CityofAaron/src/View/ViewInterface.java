@@ -36,15 +36,13 @@ public interface ViewInterface
         menu = _menu;
         max = _max;
     }
-}
-    
-     // The displayMenu method
+         // The displayMenu method
     // Purpose: displays the menu, gets the user's input, and does the 
     //  selected action
     // Parameters: none
     // Returns: none
     // ===================================    
-    @Override public void displayMenu()
+public void displayMenuView()
     {
         // execute this loop as long as the selected option is not max
         int menuOption = 0;
@@ -85,5 +83,8 @@ public interface ViewInterface
         
         
     }
+}
+    
+
 }
         

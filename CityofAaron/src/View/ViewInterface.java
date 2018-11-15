@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public interface ViewInterface
 {
-    public void displayMenu();
+    public void displayMenuView();
     public int getMenuOption();
     public void doAction(int option);
     

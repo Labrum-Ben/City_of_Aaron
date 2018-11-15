@@ -85,7 +85,15 @@ public static int buyLand(int landPrice, int acresToBuy, CropData thedata)
     }
 
  /*Ben*/   
-    public static int feedPeople(int setWheatForFood, int setWheatInStore, int setpopulation, CropData thedata)
+    
+    private static final int FOR_FOOD = 17;
+    private static final int IN_STORE = 10;
+    
+     public static int calcWheatForFood( ) {
+        int forFood = random.nextInt(IN_STORE) - FOR_FOOD ;
+        return forFood;
+     }
+    public static int setFeedPeople(int setWheatForFood, int setWheatInStore, CropData thedata)
     
     {
         if (setWheatInStore < 0)
@@ -96,6 +104,8 @@ public static int buyLand(int landPrice, int acresToBuy, CropData thedata)
 
         return setWheatInStore;
     } 
+
+       
     
     /* Gavin*/
     // The plantCrops method.

@@ -6,9 +6,10 @@
 package View;
 
 import Model.*;
-import Control.*;
 import java.util.Scanner;
 import CityofAaron.CityofAaron;
+import Model.CropData;
+import Control.CropControl;
 
 /**
  *
@@ -81,6 +82,22 @@ public static void runCropView()
      System.out.format("You now own %d acres of land. ", cropData.getAcresOwned());
 }
 
+    //Ben 
     
-}
+    public static void setfeedPeopleView(){
 
+    //Food in the Store
+        int inStore = CropControl.calcLandCost();
+    
+        System.out.println("/nHow much food do you need to feed the people");
+        
+        int forFood;
+    forFood = keyboard.nextInt();
+        
+
+        
+        CropControl.setFeedPeople(forFood, inStore, cropData);
+    }     
+       
+
+}

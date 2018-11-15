@@ -9,6 +9,7 @@
 package View;
 
 import Control.GameControl;
+import View.ViewInterface.MenuView;
 import java.util.Scanner;
 //import CityofAaron.CityofAaron;
 
@@ -17,12 +18,12 @@ import java.util.Scanner;
  *
  * @author theag - ADRIENNE GROLL
  */
-public class MainMenuView 
+public class MainMenuView extends MenuView 
 {
-    Scanner keyboard = new Scanner(System.in);
+   /* Scanner keyboard = new Scanner(System.in);
     
     private String theMenu;
-    private int max;
+    private int max;*/
   
     public void displayHelpMenuView()
 {
@@ -30,7 +31,7 @@ public class MainMenuView
     HelpMenuView hmv = new HelpMenuView();
     hmv.displayHelpMenuView();
 }
-public void displayMenuView()
+/*public void displayMenuView()
 {
     int menuOption;
     do
@@ -43,7 +44,8 @@ public void displayMenuView()
     // Perform the desired action
     doAction(menuOption);
 }   while (menuOption != max);
-}
+}*/
+
 // The MainMenuView constructor
 // Purpose: Initialize the menu data
 // Parameters: none
@@ -51,7 +53,7 @@ public void displayMenuView()
 // ===================================
 public MainMenuView()
 {
-        theMenu = "\n" +
+        super("\n" +
                    "**********************************\n" +
                    "* CITY OF AARON: MAIN GAME MENU  *\n" +
                    "**********************************\n" +
@@ -59,9 +61,9 @@ public MainMenuView()
                    " 2 - Get and start a saved game\n" +
                    " 3 - Get help on playing the game\n" +
                    " 4 - Save game\n" +
-                   " 5 - Quit\n";
+                   " 5 - Quit\n",
         
-        max = 5;
+                 5);
                
 }            
  // The getMenuOption method
@@ -69,7 +71,7 @@ public MainMenuView()
     // Parameters: none
     // Returns: integer - the option selected
     // ===================================         
-public int getMenuOption()
+/*public int getMenuOption()
     {
         //declare a variable to hold user's input
         int userInput = 0;
@@ -88,7 +90,7 @@ public int getMenuOption()
         return userInput;
         
         
-    }
+    }*/
 
     // Perform the desired action
     // The doAction method
@@ -96,7 +98,7 @@ public int getMenuOption()
     // Parameters: none
     // Returns: none
     // ===================================       
-    public void doAction(int option)
+   @Override public void doAction(int option)
     {
         switch(option)
         {
@@ -157,6 +159,16 @@ public void displaySaveGameView()
 {
     System.out.println("\nDisplay save game option selected.");
 }
+
+    @Override
+    public void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getMenuOption() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
  

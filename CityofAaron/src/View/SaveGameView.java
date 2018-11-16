@@ -8,19 +8,23 @@ package View;
 import View.MainMenuView;
 import java.util.Scanner;
 import CityofAaron.CityofAaron;
+import View.ViewInterface.MenuView;
 
 
-public class SaveGameView
+public class SaveGameView extends MenuView
 {
+
+    private boolean saveGameMenu;
     
-    private final String saveGameMenu;
+   /*rivate final String saveGameMenu;
     private int max;
  Scanner keyboard = new Scanner(System.in);
-  
+ */
+
 
 public SaveGameView()
 {
-        saveGameMenu = "\n" +
+        super("\n" +
                    "**********************************\n" +
                    "* CITY OF AARON: SAVED GAME MENU  *\n" +
                    "* Select a saved game*\n" +
@@ -29,10 +33,13 @@ public SaveGameView()
                    " 2 - Save Game 2\n" +
                    " 3 - Get help on playing the game\n" +
                    " 4 - Main Menu\n" +
-                   " 5 - Quit\n";
+                   " 5 - Quit\n",
+        
+                
+                5);
 }
         
-    public void displaySaveGameView(){
+   public void displaySaveGameView(){
         int menuOption;
         do
         {
@@ -44,7 +51,7 @@ public SaveGameView()
         // Perform the desired action
         }   while (menuOption != max);
     }
-    
+    /*
     public int getMenuOption(){
         //declare a variable to hold user's input
         int userInput = 0;
@@ -61,7 +68,7 @@ public SaveGameView()
         //end loop
         }while (userInput < 1 || userInput > MAX);
         return userInput;
-    }
+    }*/
      
     
      // The doAction method
@@ -69,7 +76,7 @@ public SaveGameView()
     // Parameters: none
     // Returns: none
     // ===================================       
-    public void doAction(int option)
+   @Override public void doAction(int option)
     {
         switch(option)
         {

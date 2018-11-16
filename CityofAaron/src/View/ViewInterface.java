@@ -26,6 +26,7 @@ public interface ViewInterface
         
     protected String menu;  // this string holds the menu string
     protected int max; // this int holds the max input value
+    protected String helpMenu;
 
     // MenuView Constructor
     // Purpose: Initialize the view object with the menu string
@@ -58,6 +59,23 @@ public void displayMenuView()
             doAction(menuOption);  
         } while (menuOption != max);
     } 
+
+    public void displayHelpMenuView()
+{
+    // execute this loop as long as the selected option is not 5
+    int menuOption;
+    do
+{
+    // Display the menu
+    System.out.println(helpMenu);
+
+    // Prompt the user and get the user’s input
+    menuOption = getMenuOption();
+    // Perform the desired action
+    doAction(menuOption);
+}   while (menuOption != max);
+}
+
 // The getMenuOption method
     // Purpose: gets the user's input
     // Parameters: none

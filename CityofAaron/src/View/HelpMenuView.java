@@ -9,18 +9,19 @@ package View;
 import Control.GameControl;
 import java.util.Scanner;
 import CityofAaron.CityofAaron;
+import View.ViewInterface.MenuView;
 /**
  *
  * @author theag - ADRIENNE GROLL
  */
-public class HelpMenuView 
+public class HelpMenuView extends MenuView
 {
-    Scanner keyboard = new Scanner(System.in);
+    /*Scanner keyboard = new Scanner(System.in);
     
     private String helpMenu;
-    private int max;
+    private int max;*/
     
-    public void displayHelpMenuView()
+/*    public void displayHelpMenuView()
 {
     // execute this loop as long as the selected option is not 5
     int menuOption;
@@ -35,15 +36,16 @@ public class HelpMenuView
     doAction(menuOption);
 }   while (menuOption != max);
 }
+    */
 
 // The MainMenuView constructor
-// Purpose: Initialize the menu data
+// Purpose: Initialize the menu data1
 // Parameters: none
 // Returns: none
 // ===================================
 public HelpMenuView()
 {
-        helpMenu = "\n" +
+        super("\n" +
                    "**********************************\n" +
                    "* CITY OF AARON: HELP GAME MENU  *\n" +
                    "**********************************\n" +
@@ -51,9 +53,9 @@ public HelpMenuView()
                    " 2 - View map help\n" +
                    " 3 - View move help\n" +
                    " 4 - View list help\n" +
-                   " 5 - Quit\n";
+                   " 5 - Quit\n",
         
-        max = 5;
+                 5);
                
 }            
  // The getMenuOption method
@@ -61,7 +63,7 @@ public HelpMenuView()
     // Parameters: none
     // Returns: integer - the option selected
     // ===================================         
-public int getMenuOption()
+/*public int getMenuOption()
     {
         //declare a variable to hold user's input
         int userInput = 0;
@@ -80,7 +82,7 @@ public int getMenuOption()
         return userInput;
         
         
-    }
+    }*/
 
     // Perform the desired action
     // The doAction method
@@ -88,7 +90,7 @@ public int getMenuOption()
     // Parameters: none
     // Returns: none
     // ===================================       
-    public void doAction(int option)
+    @Override public void doAction(int option)
     {
         switch(option)
         {

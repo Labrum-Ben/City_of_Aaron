@@ -8,16 +8,16 @@ package View;
 import View.MainMenuView;
 import java.util.Scanner;
 import CityofAaron.CityofAaron;
+import View.ViewInterface.MenuView;
 
-
-public class ListMenuView{
+public class ListMenuView extends MenuView{
     
-    private String listMenu;
+   /* private String listMenu;
     private int max;
-    Scanner keyboard = new Scanner(System.in);
+    Scanner keyboard = new Scanner(System.in); */
     
     public ListMenuView(){
-           listMenu = "\n"
+             super("\n" 
                 + "**********************************\n"
                 + "* CITY OF AARON: LIST MENU   *\n"
                 + "**********************************\n"
@@ -25,10 +25,11 @@ public class ListMenuView{
                 + " 2 - List or View the tools in the storehouse\n"
                 + " 3 - List or View the provisions in the storehouse\n"
                 + " 4 - List or View the authors of this game\n"
-                + " 5 - Return to the Main Menu\n";        
+                + " 5 - Return to the Main Menu\n",
+               5);
         }
 
-    public void displayMenuView(){
+   /* public void displayMenuView(){
         int menuOption;
         do
         {
@@ -57,10 +58,10 @@ public class ListMenuView{
         //end loop
         }while (userInput < 1 || userInput > MAX);
         return userInput;
-    }
+    } */
     
 
-    public void doAction(int option)
+    @Override public void doAction(int option)
     {
          switch(option)
         {

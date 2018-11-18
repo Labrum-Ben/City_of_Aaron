@@ -17,8 +17,8 @@ public class ListMenuView extends MenuView{
     Scanner keyboard = new Scanner(System.in); */
     
     public ListMenuView(){
-             super("\n" 
-                + "**********************************\n"
+             super("\n" +
+                 "**********************************\n"
                 + "* CITY OF AARON: LIST MENU   *\n"
                 + "**********************************\n"
                 + " 1 - List or View the animals in the storehouse\n"

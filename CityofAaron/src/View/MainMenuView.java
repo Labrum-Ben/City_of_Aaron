@@ -25,12 +25,7 @@ public class MainMenuView extends MenuView
     private String theMenu;
     private int max;*/
   
-    public void displayHelpMenuView()
-{
-     // I added this code so it would display the help menu
-    HelpMenuView hmv = new HelpMenuView();
-    hmv.displayHelpMenuView();
-}
+
 /*public void displayMenuView()
 {
     int menuOption;
@@ -109,7 +104,8 @@ public MainMenuView()
                 startSavedGame();
                 break;
             case 3: // get help menu
-                displayHelpMenuView();
+                HelpMenuView mmv = new HelpMenuView();
+                mmv.displayMenuView();
                 break;
             case 4: // save game
                 displaySaveGameView();

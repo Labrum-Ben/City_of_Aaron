@@ -43,7 +43,7 @@ public interface ViewInterface
     // Parameters: none
     // Returns: none
     // ===================================    
-public void displayMenuView()
+@Override public void displayMenuView()
     {
         // execute this loop as long as the selected option is not max
         int menuOption = 0;
@@ -60,21 +60,7 @@ public void displayMenuView()
         } while (menuOption != max);
     } 
 
-    public void displayHelpMenuView()
-{
-    // execute this loop as long as the selected option is not 5
-    int menuOption;
-    do
-{
-    // Display the menu
-    System.out.println(helpMenu);
 
-    // Prompt the user and get the user’s input
-    menuOption = getMenuOption();
-    // Perform the desired action
-    doAction(menuOption);
-}   while (menuOption != max);
-}
 
 // The getMenuOption method
     // Purpose: gets the user's input

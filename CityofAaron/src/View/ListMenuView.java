@@ -5,7 +5,7 @@ package View;
  * @author Gavin Siegel
  * Date last modified:  11/7/2018
  */
-import View.MainMenuView;
+
 import java.util.Scanner;
 import CityofAaron.CityofAaron;
 import View.ViewInterface.MenuView;
@@ -83,18 +83,20 @@ public class ListMenuView extends MenuView{
     }   
 
     public void listAnimals(){
- 
+        System.out.println("\nList animals.");
     }
 
     public void listTools(){
-
+           System.out.println("\nList tools.");
     }
 
     public void listProvisions(){
-
+            System.out.println("\nList provisions.");
     }
 
     public void listTeam(){
- 
+            System.out.println("\nList team.");
     }
+
+
 }

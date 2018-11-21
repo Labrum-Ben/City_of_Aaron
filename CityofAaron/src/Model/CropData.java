@@ -17,6 +17,7 @@ public class CropData {
     private int wheatForFood;
     private int acresPlanted;
     private int offering;
+    private int offeringBushels;
     
     /* Ben's Part*/
     private int year;
@@ -91,6 +92,10 @@ public int getAcresOwned()
     {        
          return feedPeople;
     }
+    public int getOfferingBushels()
+    {
+	return offeringBushels;
+    }
          /*Adrienne*/
     
     public void setNumberWhoDied(int _numberWhoDied)
@@ -131,6 +136,10 @@ public int getAcresOwned()
     public void setFeedPeople(int _feedPeople)
     {
         feedPeople = _feedPeople;
+    }
+    public void setOfferingBushels(int _offeringBushels)
+    {
+        offeringBushels = _offeringBushels;
     }
     
     /*Ben*/

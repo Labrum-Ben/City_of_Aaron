@@ -17,7 +17,7 @@ public class GameControl {
 private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
     
-  public static void createNewGame(String _name)  
+public static void createNewGame(String _name)  
   {
        // create the game object
         Game game = new Game();
@@ -28,40 +28,20 @@ private static final int MAX_COL = 5;
         
         // save reference to the player object in the game
         game.setPlayer(player);
-        
-        theGame.setMap(theMap);
 
-// create and initialize a CropData object
-// save a reference to it in the Game object
-        CropData cropData = new CropData();
-        
-        cropData.setYear(0);
-        cropData.setPopulation(100);
-        cropData.setNewPeople(5);
-        cropData.setCropYield(3);
-        cropData.setNumberWhoDied(0);
-        cropData.setWheatInStore(2700);
-        cropData.setAcresOwned(1000);
-        cropData.setAcresPlanted(1000);
-        cropData.setHarvest(3000);
-        cropData.setAcresPlanted(1000); 
-        
-        game.setCropData(cropData); 
-        
-        // when all is done, save a reference to the Game object
-        CityofAaron.setGame(game);
+        // create the map
+        createMap();
 
+        // create the crop data object
+        createCropDataObject();
+   }
         
-   
-  }     
-  
-  public class createCropDataObject{
       // method prologue ….
     public static void createCropDataObject()
     {
         CropData theCrops = new CropData();
         
-        theCrops.setYears(0);
+        theCrops.setYear(0);
         theCrops.setPopulation(100);
         theCrops.setNewPeople(5);
         theCrops.setCropYield(3);
@@ -74,9 +54,9 @@ private static final int MAX_COL = 5;
         theCrops.setOfferingBushels(300);
         theCrops.setAcresPlanted(1000); 
         
-        theGame.setCropData(theCrops);         
+        game.setCropData(theCrops);         
     }
-  }
+  
 
     // The createMap method
     // Purpose: creates the location objects and the map
@@ -96,7 +76,6 @@ private static final int MAX_COL = 5;
 
 // create a new Location object
 Location loc = new Location();
-
 // use setters in the Location class to set the description and symbol
 loc.setDescription(river);
 loc.setSymbol("~~~");  
@@ -108,83 +87,77 @@ for(int i = 0; i < MAX_ROW; i++)
  }
 
  // define the string for a farm land location
- String farmland = "\nYou are on the fertile banks of the River." +
- "\nIn the spring this low farmland floods and is covered with rich" +
+ String wheatfield = "\nYou are on the fertile banks of the River." +
+ "\nIn the spring this low wheayfeilds flood and is covered with rich" +
  "\nnew soil. Wheat is planted as far as you can see."; 
 
- // set a farmland location with a hint
+ // set a wheatfield location with a hint
  loc = new Location();
- loc.setDescription(farmland + "\nOne bushel will plant two acres of wheat.");
+ loc.setDescription(wheatfield + "\nOne bushel will plant two acres of wheat.");
  loc.setSymbol("!!!");
  theMap.setLocation(3, 3, loc);
+ theMap.setLocation(4, 3, loc);
+ theMap.setLocation(5, 3, loc);
  
-  // define the string for a wilderness land location
- String wilderness = "\nYou are lost in the wilderness." +
+  // define the string for a lamaniteBorder land location
+ String lamaniteBorder = "\nYou are headed to the border of the Lamanites land." +
  "\nLions and Tigers and Bears... Oh My!" +
  "\nTurn back now."; 
 
-  // set a wilderness location with a hint
+  // set a lamaniteBorder location with a hint
  loc = new Location();
- loc.setDescription(wilderness + "\nIf your keys fall into a vat of boiling lava don't reach in after them.");
+ loc.setDescription(lamaniteBorder + "\nIf your keys fall into a vat of boiling lava don't reach in after them.");
  loc.setSymbol("---");
  theMap.setLocation(0, 5, loc);
 
  
-   // define the string for a wilderness land location
- String ocean = "\nYou can smell the fresh air of the Ocean." +
- "\nYou can feel the sand between your toes." +
- "\nThing-a-ma-bobs, I got twenty of them."; 
+   // define the string for a desert land location
+ String desert = "\nYou are as far west as you can go." +
+ "\nThe City's Granary and the Ruler's Court are to the east." +
+ "\nThere is also undeveloped land to the east."; 
 
-  // set a wilderness location with a hint
+  // set a desert location with a hint
  loc = new Location();
- loc.setDescription(ocean + "\nBroken promises don't upset me. I just think, why did they believe me?");
+ loc.setDescription(desert + "\nBroken promises don't upset me. I just think, why did they believe me?");
  loc.setSymbol("@@@");
  theMap.setLocation(0, 1, loc);
  
     // define the string for a wilderness land location
- String valley = "\nThis looks like a peaceful place to take a nap." +
- "\nThe valley lays between two mountain regions west of the village." +
- "\nYou can almost see the temple from here."; 
+ String rulersCourt = "\nThis is where the rulers come to court." +
+ "\nthe desert is west of here." +
+ "\nThe village is east from here."; 
 
   // set a wilderness location with a hint
  loc = new Location();
- loc.setDescription(ocean + "\nThis is a flat area between the mountains.");
+ loc.setDescription(rulersCourt + "\nThis is where the rulers are.");
  loc.setSymbol("^_^");
  theMap.setLocation(2, 2, loc);
  
     // define the string for a wilderness land location
- String mountains = "\nYou can see the entire valley from here." +
- "\nThe village is to your right and the ocean to your left." +
- "\nThe Valley is between two mountian ranges, and the Temple can be found here."; 
+ String undevelopedLand = "\nYou can see the desert from here." +
+ "\nThe wheat fields is to your right and the desert to your left." +
+ "\nThe land is undeveloped."; 
 
   // set a wilderness location with a hint
  loc = new Location();
- loc.setDescription(mountains + "\nTo me, boxing is like a ballet, except there's no music, no choreography, and the dancers hit each other.");
+ loc.setDescription(undevelopedLand + "\n.There is nothing here.");
  loc.setSymbol("^^^");
- theMap.setLocation(1, 2, loc);
  theMap.setLocation(3, 2, loc);
+ theMap.setLocation(4, 2, loc);
+ theMap.setLocation(5, 2, loc);
  
     // define the string for a wilderness land location
- String temple = "\nThe Ocean is to your west and the fields to your east." +
- "\nThere is a mountain range north of you." +
- "\nThe desert is south of your location."; 
+ String granaryStorehouse = "\nThe village is to the east." +
+ "\nThere is a ruler's court south of you." +
+ "\nThe desert is west of your location."; 
 
   // set a wilderness location with a hint
  loc = new Location();
- loc.setDescription(mountains + "\nTo me, boxing is like a ballet, except there's no music, no choreography, and the dancers hit each other.");
+ loc.setDescription(granaryStorehouse + "\nThis is where we store our grains.");
  loc.setSymbol("***");
- theMap.setLocation(4, 2, loc);
+ theMap.setLocation(1, 2, loc);
  
-     // define the string for a wilderness land location
- String desert = "\nYou are as far south as you can go." +
- "\nIs that water in the distance to the west?." +
- "\nThere are more fields to the east."; 
-
-  // set a wilderness location with a hint
- loc = new Location();
- loc.setDescription(mountains + "\nIt is very dry and not much can grow here.");
- loc.setSymbol(">>>");
- theMap.setLocation(5, 2, loc);
+     
  
      // define the string for a wilderness land location
  String village = "\nThe mountains can block your view to the west." +
@@ -195,20 +168,13 @@ for(int i = 0; i < MAX_ROW; i++)
  loc = new Location();
  loc.setDescription(village + "\nThis is it y'all.");
  loc.setSymbol("$$$");
- theMap.setLocation(3, 1, loc);
- theMap.setLocation(3, 2, loc);
+ theMap.setLocation(1, 3, loc);
+ theMap.setLocation(2, 3, loc);
  
-      // define the string for a wilderness land location
- String field = "\nThe river floods from the east." +
- "\nThe farmland is north from here." +
- "\nyou are as far south as you can go."; 
 
-  // set a wilderness location with a hint
- loc = new Location();
- loc.setDescription(field + "\nThis is where we grow our food.");
- loc.setSymbol("???");
- theMap.setLocation(3, 4, loc);
- theMap.setLocation(3, 5, loc);
  
+ game.setMap(theMap);
+ 
+}
 }
 

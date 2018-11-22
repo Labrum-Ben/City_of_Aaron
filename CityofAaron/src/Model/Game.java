@@ -23,6 +23,7 @@ public class Game implements Serializable {
     private int animals;
     private int tools;
     private int provisions;
+    private Map theMap;
     
         
     public Game()  { }
@@ -64,6 +65,9 @@ public class Game implements Serializable {
     }  
     public int getProvisions(){
        return provisions;
+    }
+    public void setMap(Map _map) {
+     theMap = _map;
     }
 
 }

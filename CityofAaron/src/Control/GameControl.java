@@ -16,6 +16,7 @@ public class GameControl {
     // size of the Locations array
 private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
+private static Game game;
     
 public static void createNewGame(String _name)  
   {

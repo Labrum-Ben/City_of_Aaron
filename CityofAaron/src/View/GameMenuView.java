@@ -85,7 +85,7 @@ public GameMenuView()
     public void viewList()
     {
         ListMenuView lmv = new ListMenuView();
-        lmv.displayMenu();
+        lmv.displayMenuView();
     } 
     
     

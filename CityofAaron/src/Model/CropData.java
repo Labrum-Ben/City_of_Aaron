@@ -6,6 +6,8 @@
  */
 package Model;
 
+
+
 /**
  *
  * @author theag
@@ -18,6 +20,7 @@ public class CropData {
     private int acresPlanted;
     private int offering;
     private int offeringBushels;
+
     
     /* Ben's Part*/
     private int year;
@@ -96,6 +99,7 @@ public int getAcresOwned()
     {
 	return offeringBushels;
     }
+
          /*Adrienne*/
     
     public void setNumberWhoDied(int _numberWhoDied)
@@ -141,6 +145,8 @@ public int getAcresOwned()
     {
         offeringBushels = _offeringBushels;
     }
+
+    
     
     /*Ben*/
     

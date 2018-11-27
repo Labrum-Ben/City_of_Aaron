@@ -10,9 +10,10 @@ package Model;
 
 /**
  *
- * @author theag
+ * @author Adrienne Groll
  */
 import java.io.Serializable;
+import java.util.ArrayList;
 
 
 
@@ -20,7 +21,7 @@ public class Game implements Serializable {
    
     private Player thePlayer;
     private CropData cropData;
-    private int animals;
+    private ArrayList<ListItem> animals;
     private int tools;
     private int provisions;
     private Map theMap;
@@ -45,11 +46,12 @@ public class Game implements Serializable {
     public CropData getCropData() {
        return cropData;
     }
-    public void setAnimals(int _animals)
+    public void setAnimals(ArrayList<ListItem> _animals)
+     {
+           animals = new ArrayList<ListItem>(_animals);
+     }
+    public ArrayList<ListItem> getAnimals() 
     {
-      animals = _animals;
-    }  
-    public int getAnimals() {
        return animals;
     }
     public void setTools(int _tools)

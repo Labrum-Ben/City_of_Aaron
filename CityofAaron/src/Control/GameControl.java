@@ -6,6 +6,7 @@
 package Control;
 import Model.*;
 import CityofAaron.CityofAaron;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,6 +18,7 @@ public class GameControl {
 private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
 private static Game game;
+private ArrayList<ListItem> animals;
     
 public static void createNewGame(String _name)  
   {
@@ -35,6 +37,10 @@ public static void createNewGame(String _name)
 
         // create the crop data object
         createCropDataObject();
+        
+        //create the AnimalList()
+        createAnimalList();
+        
    }
         
       // method prologue ….
@@ -177,5 +183,26 @@ for(int i = 0; i < MAX_ROW; i++)
  game.setMap(theMap);
  
 }
+    
+    //The createAnimalList method 
+    //Purpose: shows the user a list of the animals
+    //Parameters: none
+    //Returns: none
+    //Author: Adrienne Groll
+    //Date Modified: Nov. 24, 2018
+    //=======================================
+    public static void createAnimalList()
+    {
+        ArrayList<ListItem> animals = new ArrayList<>();
+        
+        animals.add(new ListItem("Horse", 4));
+        animals.add(new ListItem("Cow", 8));
+        animals.add(new ListItem("Chicken", 24));
+        animals.add(new ListItem("Pig", 10));
+       
+        game.setAnimals(animals);
+
+    }
+ 
 }
 

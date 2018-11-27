@@ -203,6 +203,17 @@ for(int i = 0; i < MAX_ROW; i++)
         game.setAnimals(animals);
 
     }
+    
+        public static void createToolList() {
+        ArrayList<ListItem> tools = new ArrayList<>();
+
+        tools.add(new ListItem("Axe", 12));
+        tools.add(new ListItem("Shovel", 7));
+        tools.add(new ListItem("Hammer", 22));
+        tools.add(new ListItem("Pitchfork", 12));
+
+        game.setTools(tools);
+    }
  
 }
 

@@ -79,7 +79,4 @@ public class ListMenuView extends MenuView{
             System.out.println("\nList team.");
     }
 
-
-
-
 }

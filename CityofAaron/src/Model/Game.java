@@ -72,4 +72,8 @@ public class Game implements Serializable {
      theMap = _map;
     }
 
+    public void setTools(ArrayList<ListItem> tools) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

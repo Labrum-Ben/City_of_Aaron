@@ -8,6 +8,7 @@ package Control;
  */
 
 
+import Exceptions.CropException;
 import Model.CropData;
 import java.util.Random;
 
@@ -40,17 +41,17 @@ private static Random random = new Random();
 * Pre-conditions: acres to buy must be positive
 * and <= the number of acres owned
 */    
-public static int buyLand(int landPrice, int acresToBuy, CropData thedata)
+public static void buyLand(int landPrice, int acresToBuy, CropData thedata) throws CropException
 {
    
         //if acresToBuy < 0, return -1
     if(acresToBuy<0)
-        return-1;
+        throw new CropException("Please enter a positive numbers");
     
     int wheatInStore = thedata.getWheatInStore();
     //if (acresToBuy * landPrice) > wheat inStore, return -1
     if ((acresToBuy * landPrice) > wheatInStore)
-            return -1;
+         throw new CropException("There is insufficient wheat to buy this much land");
  
     int owned = thedata.getAcresOwned();
     //acresOwned = acresOwned + acresToBuy
@@ -63,8 +64,7 @@ public static int buyLand(int landPrice, int acresToBuy, CropData thedata)
     thedata.setWheatInStore(wheat);
 
     
-   //return acresOwned
-    return owned;
+
 
 
 }

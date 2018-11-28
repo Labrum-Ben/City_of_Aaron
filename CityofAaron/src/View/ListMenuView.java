@@ -7,8 +7,8 @@ package View;
  */
 
 import java.util.Scanner;
-import CityofAaron.CityofAaron;
-import Model.ListItem;
+import cityofaaron.CityofAaron;
+import Model.*;
 import View.ViewInterface.MenuView;
 import java.util.ArrayList;
 

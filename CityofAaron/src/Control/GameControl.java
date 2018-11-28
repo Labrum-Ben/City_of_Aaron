@@ -5,7 +5,7 @@
  */
 package Control;
 import Model.*;
-import CityofAaron.CityofAaron;
+import cityofaaron.CityofAaron;
 import java.util.ArrayList;
 
 /**
@@ -17,13 +17,12 @@ public class GameControl {
     // size of the Locations array
 private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
-private static Game game;
+private static Game game = new Game();
 private ArrayList<ListItem> animals;
     
 public static void createNewGame(String _name)  
   {
-       // create the game object
-        Game game = new Game();
+
         
         // create the player object and set the name
         Player player = new Player();
@@ -40,6 +39,8 @@ public static void createNewGame(String _name)
         
         //create the AnimalList()
         createAnimalList();
+        
+        CityofAaron.setGame(game);
         
    }
         
@@ -104,7 +105,7 @@ for(int i = 0; i < MAX_ROW; i++)
  loc.setSymbol("!!!");
  theMap.setLocation(3, 3, loc);
  theMap.setLocation(4, 3, loc);
- theMap.setLocation(5, 3, loc);
+
  
   // define the string for a lamaniteBorder land location
  String lamaniteBorder = "\nYou are headed to the border of the Lamanites land." +
@@ -115,7 +116,7 @@ for(int i = 0; i < MAX_ROW; i++)
  loc = new Location();
  loc.setDescription(lamaniteBorder + "\nIf your keys fall into a vat of boiling lava don't reach in after them.");
  loc.setSymbol("---");
- theMap.setLocation(0, 5, loc);
+
 
  
    // define the string for a desert land location
@@ -151,7 +152,7 @@ for(int i = 0; i < MAX_ROW; i++)
  loc.setSymbol("^^^");
  theMap.setLocation(3, 2, loc);
  theMap.setLocation(4, 2, loc);
- theMap.setLocation(5, 2, loc);
+
  
     // define the string for a wilderness land location
  String granaryStorehouse = "\nThe village is to the east." +

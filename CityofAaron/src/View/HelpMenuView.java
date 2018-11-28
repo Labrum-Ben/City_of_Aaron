@@ -8,7 +8,7 @@ package View;
 
 import Control.GameControl;
 import java.util.Scanner;
-import CityofAaron.CityofAaron;
+import cityofaaron.CityofAaron;
 import View.ViewInterface.MenuView;
 /**
  *

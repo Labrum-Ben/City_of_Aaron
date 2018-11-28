@@ -5,7 +5,7 @@
  *  Team members: Ben Labrum, Adrienne Groll
  */
 
-package CityofAaron;
+package cityofaaron;
 import java.util.Random;
 import Model.*;
 import View.*;

@@ -7,7 +7,7 @@ package View;
 
 import Model.*;
 import java.util.Scanner;
-import CityofAaron.CityofAaron;
+import cityofaaron.CityofAaron;
 import Model.CropData;
 import Control.CropControl;
 import Exceptions.CropException;

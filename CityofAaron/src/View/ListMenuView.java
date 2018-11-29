@@ -59,8 +59,8 @@ public class ListMenuView extends MenuView{
   public void listAnimals()
     {
     // List or view the animals in the storehouse
-        Game game = CityofAaron.getGame();
-        ArrayList<ListItem> animals = game.getAnimals();
+        Game theGame = CityofAaron.getGame();
+        ArrayList<ListItem> animals = theGame.getAnimals();
 
     System.out.format("%-16s%-24s\n", "Animal", "Quantity");
     for(ListItem animal : animals)

@@ -61,10 +61,15 @@ public GameMenuView()
  {
      System.out.println("\nView map option selected.");
  }
- 
+    // The viewList() method
+    // Purpose: Creates a ListMenuView object and calls its
+    // displayMenu( ) method       
+    // Parameters: none
+    // Returns: none
  public void ViewList()
  {
-     System.out.println("\nView list option selected.");
+    ListMenuView lmv = new ListMenuView();
+    lmv.displayMenuView();
  }
  
  public void MoveToNewLocation ()
@@ -76,17 +81,6 @@ public GameMenuView()
  {
      System.out.println("\nManage the crops.");
  }
- 
-     // The viewList() method
-    // Purpose: Creates a ListMenuView object and calls its
-    // displayMenu( ) method       
-    // Parameters: none
-    // Returns: none
-    public void viewList()
-    {
-        ListMenuView lmv = new ListMenuView();
-        lmv.displayMenuView();
-    } 
     
     
 }

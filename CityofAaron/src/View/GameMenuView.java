@@ -82,6 +82,5 @@ public GameMenuView()
      System.out.println("\nManage the crops.");
  }
     
-    
 }
 

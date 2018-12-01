@@ -37,6 +37,10 @@ public static void runCropView()
     // add calls to the other crop view methods
     // as they are written
     setOfferingView( );
+    //setfeedPeopleView();
+    plantCropsView();
+    
+    
 }
 
     
@@ -66,25 +70,23 @@ public static void runCropView()
     // Returns: none
     public static void buyLandView() {
         // Get the cost of land for this round.
-     int price = CropControl.calcLandCost();
+     int landPrice = CropControl.calcLandCost();
 
      // Prompt the user to enter the number of acres to buy
-     System.out.format("Land is selling for %d bushels per acre.%n",price);
+     System.out.format("Land is selling for %d bushels per acre.%n",landPrice);
      System.out.print("\nHow many acres of land do you wish to buy? "); 
 
     //  Get the user’s input and save it.
-    int toBuy;
-    toBuy = keyboard.nextInt();
-    
-     boolean paramsNotOkay;
- do
- {
-paramsNotOkay = false;
+    int acresToBuy;  
+    boolean paramsNotOkay;
+    do
+    {
+        paramsNotOkay = false;
        System.out.print("\nHow many acres of land do you wish to buy? ");  
-       toBuy = keyboard.nextInt();
+       acresToBuy = keyboard.nextInt();
        try
        {
-            CropControl.buyLand(price, toBuy, cropData);
+            CropControl.buyLand(landPrice, acresToBuy, cropData);
         }
         catch(CropException e)
         {
@@ -100,10 +102,47 @@ paramsNotOkay = false;
      // output how much land we now own
      System.out.format("You now own %d acres of land. ", cropData.getAcresOwned());
 }
+//Adrienne
+    // The plantCrops method
+    // Purpose: interface with the user input for planting crops
+    // Parameters: none
+    // Returns: none
+    public static void plantCropsView() {
+     
+        int acresOwned = cropData.getAcresOwned();
 
+     // Prompt the user to enter the number of crops to plant
+     System.out.format("There is %d of wheat in store.%n", acresOwned);
+     System.out.print("\nHow many acres of land do you wish to plant? "); 
+
+    //  Get the user’s input and save it.
+    int acresToPlant;  
+    boolean paramsNotOkay;
+    do
+    {
+        paramsNotOkay = false;
+       System.out.print("\nHow many acres of land do you wish to plant? ");  
+       acresToPlant = keyboard.nextInt();
+       try
+       {
+        CropControl.plantCrops(acresToPlant, cropData);
+        }
+        catch(CropException e)
+        {
+             System.out.println("I am sorry master, I cannot do this.");
+             System.out.println(e.getMessage());
+             paramsNotOkay = true;
+        }
+} while(paramsNotOkay);
+    
+    
+    
+    
+    
+    
     //Ben 
     
-    public static void setfeedPeopleView(){
+    //public static void setfeedPeopleView(){
 
     //Food in the Store
         int inStore = CropControl.calcLandCost();

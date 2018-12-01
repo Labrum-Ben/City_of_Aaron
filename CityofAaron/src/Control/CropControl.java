@@ -40,6 +40,10 @@ private static Random random = new Random();
 * return the number of acres left after the sale
 * Pre-conditions: acres to buy must be positive
 * and <= the number of acres owned
+     * @param landPrice
+     * @param acresToBuy
+     * @param thedata
+     * @throws Exceptions.CropException
 */    
 public static void buyLand(int landPrice, int acresToBuy, CropData thedata) throws CropException
 {
@@ -50,7 +54,7 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     
     int wheatInStore = thedata.getWheatInStore();
     //if (acresToBuy * landPrice) > wheat inStore, return -1
-    if ((acresToBuy * landPrice) > wheatInStore)
+    if (wheatInStore < acresToBuy * landPrice)
          throw new CropException("There is insufficient wheat to buy this much land");
  
     int owned = thedata.getAcresOwned();
@@ -59,9 +63,9 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     thedata.setAcresOwned(owned);
     
     //wheatInStore = wheatInStore - (acresToBuy * landPrice)
-    int wheat = thedata.getWheatInStore();
-    wheat-= (acresToBuy * landPrice);
-    thedata.setWheatInStore(wheat);
+    wheatInStore = thedata.getWheatInStore();
+    wheatInStore-= (acresToBuy * landPrice);
+    thedata.setWheatInStore(wheatInStore);
 
     
 
@@ -107,7 +111,7 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
 
        
     
-    /* Gavin*/
+    /* Gavin--Original plantCrops() method & Adrienne--CropException*/ 
     // The plantCrops method.
     // Purpose: plant the crops.
     // Parameters: the number of acres of land that the player wants to plant.
@@ -115,18 +119,22 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     // of wheat in store. If there's an error, an exception is throw.
     // Pre-conditions: number of wheat in store and acres must be enough for 
     // user to plant the crops.
-    public int plantCrops(int acresToPlant, int acresOwned, int wheatInStore, CropData cropData)
+    public static void plantCrops(int acresToPlant, CropData cropData) throws CropException
     {
         int acreOwned = cropData.getAcresOwned();
-        if (acresToPlant > acresOwned) 
-            return -1;
+        if (acresToPlant > acreOwned) 
+            throw new CropException("A negative value was input");
 
         int wheatOwned = cropData.getWheatInStore();
-        if (acresToPlant * 2 > wheatInStore) 
-            return -1;
+        if (acresToPlant * 2 > wheatOwned) 
+            throw new CropException("There is insufficient wheat to buy this much land");
 
-        return acresOwned;
+        
         }
+
+
+
+
     
     
 

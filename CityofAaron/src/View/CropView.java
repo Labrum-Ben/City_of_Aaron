@@ -135,27 +135,42 @@ public static void runCropView()
         }
 } while(paramsNotOkay);
     
+    }
+    //Ben
+    //FeedPeople method
     
-    
-    
-    
-    
-    //Ben 
-    
-    //public static void setfeedPeopleView(){
+    public static void feedPeopleView(){
 
     //Food in the Store
-        int inStore = CropControl.calcLandCost();
-    
+        int wheatInStore = cropData.getWheatInStore();
+        
+    //Prompt for food needed    
+    System.out.format("There is %d of wheat in store.%n", wheatInStore);
+    System.out.println("/nHow much food do you need to feed the people");
+        
+        //Get user input
+        int feedPeople;
+        boolean paramsNotOkay;
+    do
+    {
+        paramsNotOkay = false;
         System.out.println("/nHow much food do you need to feed the people");
-        
-        int forFood;
-    forFood = keyboard.nextInt();
-        
+        feedPeople = keyboard.nextInt();
+ 
+        try
+        {
+        CropControl.feedPeople(wheatInStore,feedPeople, cropData);  
+        }
+        catch(CropException e)
+        {
+             System.out.println("I am sorry master, I cannot do this.");
+             System.out.println(e.getMessage());
+             paramsNotOkay = true;
+        }
+} while(paramsNotOkay);    
+       
 
-        
-        CropControl.setFeedPeople(forFood, inStore, cropData);
-    }     
+}     
     
     // Gavin
     public static void sellLandView() {

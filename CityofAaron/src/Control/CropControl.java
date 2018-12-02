@@ -89,27 +89,21 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     }
 
  /*Ben*/   
-    
-    private static final int FOR_FOOD = 17;
-    private static final int IN_STORE = 10;
-    
-     public static int calcWheatForFood( ) {
-        int forFood = random.nextInt(IN_STORE) - FOR_FOOD ;
-        return forFood;
-     }
-    public static int setFeedPeople(int setWheatForFood, int setWheatInStore, CropData thedata)
+  
+    public static void feedPeople(int setWheatForFood, int setWheatInStore, CropData thedata) throws CropException
     
     {
+    int wheatInStore = thedata.getWheatInStore();    
         if (setWheatInStore < 0)
-             return -1;
+            throw new CropException("There is no wheat!");
 
+    int forFood = thedata.getFeedPeople();
         if (setWheatForFood > setWheatInStore)
-            return -1;
+            throw new CropException("There is not enough wheat");
 
-        return setWheatInStore;
-    } 
-
-       
+    wheatInStore = thedata.getWheatInStore();
+    
+    }
     
     /* Gavin--Original plantCrops() method & Adrienne--CropException*/ 
     // The plantCrops method.
@@ -165,6 +159,8 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
         //return acresOwned
         return owned;
 }
+
+    
 
     }    
 

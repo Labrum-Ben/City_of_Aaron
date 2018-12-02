@@ -132,12 +132,39 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
         
         }
 
+// The sellLand method
+// Purpose: To sell land
+// Parameters: the price of land, the number of acres to sell, and a 
+// reference to a CropData object
+// Returns: the acres owned after the sale
+// Pre-conditions: acres to sell must be positive
+// and <= acresOwned
+    public static int sellLand(int landPrice, int acresToSell, CropData cropData) throws CropException {
+        //if acresToSell < 0, return -1
+        if (acresToSell < 0) {
+            throw new CropException("Unofrtunetly, you do not own any land at this momment. Please buy some and then try to sell later.");
+        }
 
+        //if acresToSell > acresOwned, return -1
+        int owned = cropData.getAcresOwned();
+        if (acresToSell > owned) {
+            throw new CropException("You are trying to sell more land than you currentlu have,only banks exhibit this type of behaviour. Please insert smaller number");
 
+        }
 
-    
-    
+        //acresOwned = acresOwned - acresToSell
+        owned -= acresToSell;
+        cropData.setAcresOwned(owned);
 
+        //wheatInStore = wheatInStore + acresToSell * landPrice
+        int wheat = cropData.getWheatInStore();
+        wheat *= (acresToSell * landPrice);
+
+        cropData.setWheatInStore(wheat);
+
+        //return acresOwned
+        return owned;
+}
 
     }    
 

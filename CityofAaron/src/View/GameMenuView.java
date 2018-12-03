@@ -80,6 +80,7 @@ public GameMenuView()
  public void ManageCrops ()
  {
      System.out.println("\nManage the crops.");
+     CropView.runCropView();
  }
     
 }

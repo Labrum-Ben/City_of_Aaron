@@ -74,7 +74,7 @@ public static void runCropView()
 
      // Prompt the user to enter the number of acres to buy
      System.out.format("Land is selling for %d bushels per acre.%n",landPrice);
-     System.out.print("\nHow many acres of land do you wish to buy? "); 
+   
 
     //  Get the user’s input and save it.
     int acresToBuy;  
@@ -113,7 +113,7 @@ public static void runCropView()
 
      // Prompt the user to enter the number of crops to plant
      System.out.format("There is %d of wheat in store.%n", acresOwned);
-     System.out.print("\nHow many acres of land do you wish to plant? "); 
+
 
     //  Get the user’s input and save it.
     int acresToPlant;  

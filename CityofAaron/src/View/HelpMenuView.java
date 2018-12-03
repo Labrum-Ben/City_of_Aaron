@@ -53,7 +53,7 @@ public HelpMenuView()
                 ViewListHelp();
                 break;
             case 5:
-                System.out.println("Thanks for playing ... goodbye.");
+                System.out.println("Returning to Main menu...");
         }
             
     }

@@ -117,7 +117,7 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     {
         int acreOwned = cropData.getAcresOwned();
         if (acresToPlant > acreOwned) 
-            throw new CropException("A negative value was input");
+            throw new CropException("You do not own this much land.");
 
         int wheatOwned = cropData.getWheatInStore();
         if (acresToPlant * 2 > wheatOwned) 

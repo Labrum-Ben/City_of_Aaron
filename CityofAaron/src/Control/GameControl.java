@@ -215,6 +215,17 @@ for(int i = 0; i < MAX_ROW; i++)
 
         game.setTools(tools);
     }
- 
+        //Ben
+     public static void createProvisionsList() {
+            ArrayList<ListItem> provisions = new ArrayList();
+            
+            provisions.add(new ListItem("provision1", 25)); 
+            provisions.add(new ListItem("provision2", 34));
+            provisions.add(new ListItem("provision3", 34));
+            provisions.add(new ListItem("provision4", 34));
+            provisions.add(new ListItem("provision5", 34));
+            
+            game.setProvisions(provisions);
+        }
 }
 

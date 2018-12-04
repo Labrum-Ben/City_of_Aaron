@@ -6,6 +6,8 @@
 package Control;
 import Model.*;
 import cityofaaron.CityofAaron;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +21,8 @@ private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
 private static Game game = new Game();
 private ArrayList<ListItem> animals;
+private ArrayList<ListItem> tools;
+private ArrayList<ListItem> provisions;
     
 public static void createNewGame(String _name)  
   {
@@ -227,5 +231,28 @@ for(int i = 0; i < MAX_ROW; i++)
             
             game.setProvisions(provisions);
         }
+     
+      
+    // the getSavedGame method
+    // Purpose: load a saved game from disk
+    // Parameters: the file path
+    // Returns: none
+    // Side Effect: the game reference in the driver is updated
+    public static void getSavedGame(String filePath)
+    {
+        Game theGame = null;
+        
+        try (FileInputStream fips = new FileInputStream(filePath))
+        {
+            ObjectInputStream input = new ObjectInputStream(fips);
+            theGame = (Game)  input.readObject();
+            CityofAaron.setCurrentGame(theGame);
+        }
+        catch(Exception e)
+        {
+            System.out.println("\nThere was an error reading the saved game file");
+        }
+    }
+
 }
 

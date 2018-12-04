@@ -22,8 +22,8 @@ public class Game implements Serializable {
     private Player thePlayer;
     private CropData cropData;
     private ArrayList<ListItem> animals;
-    private int tools;
-    private int provisions;
+    private ArrayList<ListItem> tools;
+    private ArrayList<ListItem> provisions;
     private Map theMap;
     
         
@@ -54,26 +54,22 @@ public class Game implements Serializable {
     {
        return animals;
     }
-    public void setTools(int _tools)
+    public void setTools(ArrayList<ListItem> tools)
     {
-      tools = _tools;
+      tools = new ArrayList<ListItem>(tools);
     }  
-    public int getTools() {
+    public ArrayList<ListItem> getTools() {
        return tools;
     }
-    public void setProvisions(int _provisions)
+    public void setProvisions(ArrayList<ListItem> _provisions)
     {
-      provisions = _provisions;
+       provisions = new ArrayList<ListItem>(_provisions);
     }  
-    public int getProvisions(){
+    public ArrayList<ListItem> getProvisions(){
        return provisions;
     }
     public void setMap(Map _map) {
      theMap = _map;
-    }
-
-    public void setTools(ArrayList<ListItem> tools) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }   
 
 }

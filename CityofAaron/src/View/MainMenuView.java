@@ -11,7 +11,8 @@ package View;
 import Control.GameControl;
 import View.ViewInterface.MenuView;
 import java.util.Scanner;
-//import CityofAaron.CityofAaron;
+import java.io.*;
+import cityofaaron.CityofAaron;
 
 
 /**
@@ -101,17 +102,43 @@ public MainMenuView()
     gmv.displayMenuView();  
  }
 
+// The startSavedGame method
+// Purpose: loads a saved game object from disk and start the game
+// Parameters: none
+// Returns: none
+// ===================================     
+ public static void startSavedGame()     
+ {
+       // get rid of nl character left in the stream
 
-
-public void startSavedGame()
-{
-    System.out.println("\nStart saved game option selected.");
+       // prompt user and get a file path
+    String filePath;
+    System.out.println("\nChoose a saved game.");
+    filePath = keyboard.next();
+      // call the getSavedGame( ) method in the GameControl class to load the game
+    GameControl.getSavedGame(filePath);
+      // display the game menu for the loaded game
+     GameMenuView gmv = new GameMenuView();
+     gmv.displayMenuView();
+    
 }
+
+
  
   
 public void displaySaveGameView()
 {
-    System.out.println("\nDisplay save game option selected.");
+           // get rid of nl character left in the stream
+
+       // prompt user and get a file path
+    String filePath;
+    System.out.println("\nThis is the.");
+    filePath = keyboard.next();
+      // call the getSavedGame( ) method in the GameControl class to load the game
+    GameControl.getSavedGame(filePath);
+      // display the game menu for the loaded game
+     GameMenuView gmv = new GameMenuView();
+     gmv.displayMenuView();
 }
 
 }  

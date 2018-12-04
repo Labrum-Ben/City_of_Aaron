@@ -33,6 +33,12 @@ public class CityofAaron {
     public static Game getGame( ) {
     return theGame;
     }
+
+    public static void setCurrentGame(Game theGame) {
+        
+     GameMenuView gmv = new GameMenuView();
+     gmv.displayMenuView();
+    }
     
 }
 

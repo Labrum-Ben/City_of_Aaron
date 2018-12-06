@@ -123,7 +123,11 @@ public MainMenuView()
     
 }
 
-
+// The SaveGame method
+// Purpose: save game object to disk
+// Parameters: none
+// Returns: none
+// =================================== 
  
   
 public void displaySaveGameView()

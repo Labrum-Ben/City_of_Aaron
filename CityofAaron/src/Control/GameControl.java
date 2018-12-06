@@ -256,10 +256,9 @@ for(int i = 0; i < MAX_ROW; i++)
         }
     }
 
-      public static void savedGame(String filePath)
+      public static void saveGame(Game theGame, String filePath)
     {
-        Game theGame = null;
-        
+              
             try (FileOutputStream fops = new FileOutputStream(filePath)) {
                 ObjectOutputStream output = new ObjectOutputStream(fops); 
                 output.writeObject(theGame);

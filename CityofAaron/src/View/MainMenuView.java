@@ -132,7 +132,7 @@ public void displaySaveGameView()
 
        // prompt user and get a file path
     String filePath;
-    System.out.println("\nThis is the.");
+    System.out.println("\nWhat would you like to name your game?.");
     filePath = keyboard.next();
       // call the getSavedGame( ) method in the GameControl class to load the game
     GameControl.getSavedGame(filePath);

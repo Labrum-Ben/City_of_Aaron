@@ -6,8 +6,10 @@
 package Control;
 import Model.*;
 import cityofaaron.CityofAaron;
-import java.io.FileInputStream;
+import java.io.*;
+
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -254,5 +256,22 @@ for(int i = 0; i < MAX_ROW; i++)
         }
     }
 
+      public static void savedGame(String filePath)
+    {
+        Game theGame = null;
+        
+            try (FileOutputStream fops = new FileOutputStream(filePath)) {
+                ObjectOutputStream output = new ObjectOutputStream(fops); 
+                output.writeObject(theGame);
+            CityofAaron.setCurrentGame(theGame);
+            output.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println("\nThere was an error reading the saved game file");
+        }
+    }
+    
 }
+
 

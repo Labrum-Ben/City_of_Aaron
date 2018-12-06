@@ -6,6 +6,7 @@ package View;
  * Date last modified:  11/24/2018
  */
 
+import Control.GameControl;
 import java.util.Scanner;
 import cityofaaron.CityofAaron;
 import Model.*;
@@ -68,16 +69,18 @@ public class ListMenuView extends MenuView{
     System.out.format("%-16s%-24s\n", animal.getName(), animal.getNumber());
     }
     }
+  
+  
     public void listTools(){
            System.out.println("\nList tools.");
     }
 
-    public void listProvisions(){
-            System.out.println("\nList provisions.");
-    }
-
+      public void listProvisions() {
+        System.out.println("Show Provisions Selected");
+ 
+      }
     public void listTeam(){
             System.out.println("\nList team.");
     }
-
 }
+

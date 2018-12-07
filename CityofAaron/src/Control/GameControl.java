@@ -256,19 +256,21 @@ for(int i = 0; i < MAX_ROW; i++)
         }
     }
 
-      public static void saveGame(Game theGame, String filePath)
+      public static void saveGame(String filePath)
     {
-              
-            try (FileOutputStream fops = new FileOutputStream(filePath)) {
+            Game theGame = null;    
+        
+            try (FileOutputStream fops = new FileOutputStream(filePath)) 
+            {
                 ObjectOutputStream output = new ObjectOutputStream(fops); 
                 output.writeObject(theGame);
-            CityofAaron.setCurrentGame(theGame);
-            output.close();
-        }
-        catch(Exception e)
-        {
-            System.out.println("\nThere was an error reading the saved game file");
-        }
+                CityofAaron.setCurrentGame(theGame);
+            
+            }
+            catch(Exception e)
+            {
+                System.out.println("\nThere was an error reading the saved game file");
+            }
     }
     
 }

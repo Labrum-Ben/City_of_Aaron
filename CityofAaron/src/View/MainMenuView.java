@@ -139,7 +139,7 @@ public void displaySaveGameView()
     System.out.println("\nWhat would you like to name your game?.");
     filePath = keyboard.next();
       // call the getSavedGame( ) method in the GameControl class to load the game
-    GameControl.savedGame(filePath);
+    GameControl.saveGame(filePath);
       // display the game menu for the loaded game
      GameMenuView gmv = new GameMenuView();
      gmv.displayMenuView();

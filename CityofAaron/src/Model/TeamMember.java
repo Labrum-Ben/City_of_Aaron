@@ -6,6 +6,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 /**
  *
  * @author theag

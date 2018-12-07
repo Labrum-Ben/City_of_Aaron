@@ -6,13 +6,15 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 
 
 /**
  *
  * @author theag
  */
-public class CropData {
+public class CropData implements Serializable {
     private int numberWhoDied;
     private int newPeople;
     private int harvest;

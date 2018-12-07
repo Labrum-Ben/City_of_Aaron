@@ -6,11 +6,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author theag
  */
-public class Location {
+public class Location implements Serializable {
     private String description;
     private String symbol;
 

@@ -5,11 +5,13 @@
  */
 package Model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Ben
  */
-public class ListItem {
+public class ListItem implements Serializable {
    private String  name;
    private int number;
    

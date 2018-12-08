@@ -72,7 +72,15 @@ public class ListMenuView extends MenuView{
   
   
     public void listTools(){
-           System.out.println("\nList tools.");
+    // List or view the animals in the storehouse
+        Game theGame = CityofAaron.getGame();
+        ArrayList<ListItem> tools = theGame.getTools();
+
+    System.out.format("%-16s%-24s\n", "tool", "Quantity");
+    for(ListItem tool : tools)
+    { 
+    System.out.format("%-16s%-24s\n", tool.getName(), tool.getNumber());
+    }
     }
 
       public void listProvisions() {

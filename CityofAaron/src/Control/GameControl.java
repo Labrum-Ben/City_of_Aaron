@@ -46,6 +46,9 @@ public static void createNewGame(String _name)
         //create the AnimalList()
         createAnimalList();
         
+        //create the ToolList()
+        createToolList();
+        
         CityofAaron.setGame(game);
         
    }

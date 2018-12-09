@@ -11,6 +11,9 @@ import java.util.Scanner;
 import cityofaaron.CityofAaron;
 import Model.*;
 import View.ViewInterface.MenuView;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class ListMenuView extends MenuView{
@@ -70,6 +73,37 @@ public class ListMenuView extends MenuView{
     }
     }
   
+  //ADRIENNE 12-8-2018 Week 12
+    public class WriteFile {
+        public void PrintWriter(ArrayList<ListItem> animals) throws IOException {
+
+        PrintWriter pw = null;
+        FileOutputStream fo = null;
+        
+        String filePath;
+        System.out.println("\nChoose a saved game.");
+        filePath = keyboard.next();
+        
+        try (PrintWriter out = new PrintWriter("data.txt"))
+        {
+            pw = new PrintWriter(new FileOutputStream(filePath));
+            fo = new FileOutputStream(filePath);
+            int datList = animals.size();
+            for (int i = 0; i < datList; i++) {
+                pw.write(animals.get(i).toString() + "\n");
+            }
+            } 
+            catch(IOException e)
+            {
+            System.out.println("File Error.");
+            }
+
+
+
+    } 
+
+    }
+  
   
     public void listTools(){
     // List or view the animals in the storehouse
@@ -82,6 +116,7 @@ public class ListMenuView extends MenuView{
     System.out.format("%-16s%-24s\n", tool.getName(), tool.getNumber());
     }
     }
+    
 
       public void listProvisions() {
         System.out.println("Show Provisions Selected");

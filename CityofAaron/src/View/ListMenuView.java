@@ -116,14 +116,47 @@ public class ListMenuView extends MenuView{
     System.out.format("%-16s%-24s\n", tool.getName(), tool.getNumber());
     }
     }
-    
 
+//Ben Labrum
+//12/8/2018
+//Week 12 Assignment    
+    
       public void listProvisions() {
         System.out.println("Show Provisions Selected");
- 
       }
+     public class provisionsList {
+        public void PrintWriter(ArrayList<ListItem> provisions) throws IOException {
+
+        PrintWriter pw = null;
+        FileOutputStream fo = null;
+        
+        String filePath;
+        System.out.println("\nChoose a saved game.");
+        filePath = keyboard.next();
+        
+        try (PrintWriter out = new PrintWriter("data.txt"))
+        {
+            pw = new PrintWriter(new FileOutputStream(filePath));
+            fo = new FileOutputStream(filePath);
+            int dataList = provisions.size();
+            for (int i = 0; i < dataList; i++) {
+                pw.write(provisions.get(i).toString() + "\n");
+            }
+            } 
+            catch(IOException e)
+            {
+            System.out.println("File Error.");
+            }
+
+
+
+    } 
+
+    }
     public void listTeam(){
             System.out.println("\nList team.");
     }
 }
+
+
 

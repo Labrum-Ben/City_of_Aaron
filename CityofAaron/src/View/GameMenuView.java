@@ -82,6 +82,10 @@ public GameMenuView()
      System.out.println("\nManage the crops.");
      CropView.runCropView();
  }
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
 

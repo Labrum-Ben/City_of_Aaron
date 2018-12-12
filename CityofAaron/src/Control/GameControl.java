@@ -11,6 +11,7 @@ import java.io.*;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -276,6 +277,28 @@ for(int i = 0; i < MAX_ROW; i++)
             }
     }
     
+    //Ben Week 14
+      
+        private void majorCataclysm(CropData crops) {
+            Random coinFlip = new Random();
+            int rand = coinFlip.nextInt(1);
+            
+            // Raiders steal random amount of land and kill random amount of people
+            if (rand == 0) {
+                System.out.println("Raiders have taken some of your land & killed some of your people");
+                Random r = new Random();
+                // take land
+                int landLost = r.nextInt(crops.getAcresOwned());
+                crops.setAcresOwned(landLost);
+                // kill people
+                int killed = r.nextInt(crops.getPopulation());
+                crops.setPopulation(crops.getPopulation() - killed);
+                
+            }
+
+
+}  
+      
 }
 
 

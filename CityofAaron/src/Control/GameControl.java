@@ -84,7 +84,7 @@ public static void createNewGame(String _name)
     public static void createMap()   
     {
     // create the Map object, it is 5 x 5
-        //Map <Integer, String> map = new Map<Integer, String>();
+
     // refer to the Map constructor
         Map theMap = new Map(MAX_ROW, MAX_COL);
         // create a string that will go in the Location objects

@@ -7,9 +7,14 @@ package View;
 
         
 import Control.GameControl;
+import Model.Game;
+import Model.ListItem;
+import Model.Location;
+import Model.Map;
 import java.util.Scanner;
 import cityofaaron.CityofAaron;
 import View.ViewInterface.MenuView;
+
 /**
  *
  * @author theag
@@ -60,7 +65,33 @@ public GameMenuView()
  public void ViewMap()
  {
      System.out.println("\nView map option selected.");
- }
+     String map = "\n" +
+                   "**********************************\n" +
+                   "************VILLAGE MAP***********\n" +
+                   "**********************************\n" +
+                   "        1     2      3     4    5\n" +
+                   " 1 - | @@@ | *** | $$$ | ~~~ | --- |\n" +
+                   " 2 - | @@@ | ^_^ | $$$ | ~~~ | --- |\n" +
+                   " 3 - | @@@ | ^^^ | !!! | ~~~ | --- |\n" +
+                   " 4 - | @@@ | ^^^ | !!! | ~~~ | --- |\n" +
+                   " 5 - | @@@ | ^^^ | !!! | ~~~ | --- |\n" +
+                   "                                    \n" +
+                    "Key:\n" +
+                    "@@@ - desert\n" +
+                    "*** - granary & storehouse\n" +
+                    "^_^ - ruler's court\n" +
+                    "^^^ - undeveloped land\n" +
+                    "$$$ - village\n" +
+                    "!!! - wheat field\n" +
+                    "~~~ - river\n" +
+                    "--- - border of the Lamanites land\n" ;
+     
+    System.out.println(map);
+    //for(Map theMap : loc) {
+     //               System.out.println("Description : " + entry.getKey() + " Symbol : " + entry.getValue());
+        }
+     
+ 
     // The viewList() method
     // Purpose: Creates a ListMenuView object and calls its
     // displayMenu( ) method       

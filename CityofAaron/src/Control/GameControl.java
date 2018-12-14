@@ -23,6 +23,7 @@ public class GameControl {
 private static final int MAX_ROW = 5;
 private static final int MAX_COL = 5;
 private static Game game = new Game();
+
 private ArrayList<ListItem> animals;
 private ArrayList<ListItem> tools;
 private ArrayList<ListItem> provisions;
@@ -83,9 +84,11 @@ public static void createNewGame(String _name)
     public static void createMap()   
     {
     // create the Map object, it is 5 x 5
+        //Map <Integer, String> map = new Map<Integer, String>();
     // refer to the Map constructor
         Map theMap = new Map(MAX_ROW, MAX_COL);
         // create a string that will go in the Location objects
+        
         // that contain the river
         String river = "\nYou are on the River. The river is the source" +
                       "\nof life for our city. The river marks the eastern " +

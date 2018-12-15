@@ -159,9 +159,23 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
         //return acresOwned
         return owned;
 }
+    // The setYewYear method
+    // Purpose: To advance year and ens game if and when the 10 years have passed
+    // Parameters: none
+    // Returns: The new/curent year
+    // Pre-conditions: none
 
-    
+    public static int setNewYear(int year, CropData cropData) throws Exception {
+        int newYear = cropData.getYear();
+        if (year <= 10) {
+            newYear = year + 1;
+            cropData.setYear(newYear);
+            return newYear;
+        } else {
+            throw new Exception("You have sucesfully governed your people for 10 years your term as the governor. Game over.");
+        }
+    }
 
-    }    
+}
 
 

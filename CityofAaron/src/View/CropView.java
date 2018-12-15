@@ -201,5 +201,20 @@ public static void runCropView()
         }
 } while(paramsNotOkay);
     }
+    
+    public static void setNewYearView() {
+    boolean paramsNotOkay;
+    int year = 1;
+    do {
+        paramsNotOkay = false;
+        try{CropControl.setNewYear(year, cropData);
+        }
+        catch (Exception e) {
+        System.out.println("You have succesfully served your term as the governor and can now pursue for other positions in the Nephie government!");
+        System.out.println(e.getMessage());
+        paramsNotOkay = true;
+      }
+    }while(paramsNotOkay);
+}
 
 }

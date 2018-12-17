@@ -83,9 +83,9 @@ public static void createNewGame(String _name)
     // Returns: none
     public static void createMap()   
     {
-    // create the Map object, it is 5 x 5
+        // create the Map object, it is 5 x 5
 
-    // refer to the Map constructor
+        // refer to the Map constructor
         Map theMap = new Map(MAX_ROW, MAX_COL);
         // create a string that will go in the Location objects
         
@@ -93,31 +93,30 @@ public static void createNewGame(String _name)
         String river = "\nYou are on the River. The river is the source" +
                       "\nof life for our city. The river marks the eastern " +
                       "\nboundary of the city - it is wilderness to the East.";
-        
 
-// create a new Location object
-Location loc = new Location();
-// use setters in the Location class to set the description and symbol
-loc.setDescription(river);
-loc.setSymbol("~~~");  
+        // create a new Location object
+        Location loc = new Location();
+        // use setters in the Location class to set the description and symbol
+        loc.setDescription(river);
+        loc.setSymbol("~~~");  
 
-// set this location object in each cell of the array in column 4      
-for(int i = 0; i < MAX_ROW; i++)
- {
-        theMap.setLocation(i, 4, loc);
- }
+        // set this location object in each cell of the array in column 4      
+        for(int i = 0; i < MAX_ROW; i++)
+        {
+            theMap.setLocation(i, 4, loc);
+        }
 
- // define the string for a farm land location
- String wheatfield = "\nYou are on the fertile banks of the River." +
- "\nIn the spring this low wheayfeilds flood and is covered with rich" +
- "\nnew soil. Wheat is planted as far as you can see."; 
+        // define the string for a farm land location
+        String wheatfield = "\nYou are on the fertile banks of the River." +
+        "\nIn the spring this low wheayfeilds flood and is covered with rich" +
+        "\nnew soil. Wheat is planted as far as you can see."; 
 
- // set a wheatfield location with a hint
- loc = new Location();
- loc.setDescription(wheatfield + "\nOne bushel will plant two acres of wheat.");
- loc.setSymbol("!!!");
- theMap.setLocation(3, 3, loc);
- theMap.setLocation(4, 3, loc);
+        // set a wheatfield location with a hint
+        loc = new Location();
+        loc.setDescription(wheatfield + "\nOne bushel will plant two acres of wheat.");
+        loc.setSymbol("!!!");
+        theMap.setLocation(3, 3, loc);
+        theMap.setLocation(4, 3, loc);
 
  
   // define the string for a lamaniteBorder land location

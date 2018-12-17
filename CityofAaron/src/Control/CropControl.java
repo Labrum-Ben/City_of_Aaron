@@ -67,10 +67,6 @@ public static void buyLand(int landPrice, int acresToBuy, CropData thedata) thro
     wheatInStore-= (acresToBuy * landPrice);
     thedata.setWheatInStore(wheatInStore);
 
-    
-
-
-
 }
     /*ADRIENNE*/
 
